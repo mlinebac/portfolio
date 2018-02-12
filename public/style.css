@@ -1,8 +1,8 @@
 
 body{
-	width:auto;
-	height:auto;
-	background: url("wood-2631780_1920.jpg") no-repeat;
+	background: #ffbb33;
+	background: url("wood-2631780_1920.jpg") no-repeat center fixed;
+	background-size: cover;
 }
 aside {
 	text-align:center;
@@ -18,48 +18,62 @@ aside {
 	width:auto;
 	margin:0 auto;
 	background-position: 0px 0px;
-	background-image: url("mountains.jpg"), url(mountains2.jpg);
-	background-repeat: no-repeat, repeat;
+	background-image: url("mountains.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 	animation: animatedBackground 40s linear infinite;
 }
 
 
 #hello {
-	margin-top:75px;
-	margin-left:5%;
-	color:white;
+	text-align: left;
 }
 
-#myName{
-	text-align:center;
+#main  {
+	background: rgba(149, 165, 166,.6);
+	margin:15% 15% 5% 15%;
+	padding: 10px 10px 10px 10px;
 	color:white;
+	border-radius: 5px;
 
 }
-
+#projects {
+	background: rgba(149, 165, 166,.7);
+}
 .container-fluid h2, p{
-	text-align: center;
 	color:white;
-	margin-top:5%;
-
+	
 }
 .container-fluid b{
 	color:#ffbb33;
 }
 
 .jumbotron{
-	margin:5% 10% 5% 10%;
+	margin:5% 15% 5% 15%;
 	padding: 5px 10px 5px 10px;
-	background: rgba(128,150,168,.6);
+	background: rgba(149, 165, 166,.8);
 	text-align: center;
 	align-content: center;
 	justify-content: center;
 	align-items: center;
+	border-radius: 5px;
 	color:#212121;
 }
-	
-#tot {
-	margin-top:10%;
+
+#tess {
+	margin-top: 10%;
+}	
+
+@media screen and (max-width: 768px) {
+	#tess {
+		margin-top:15%;
+	}
 }
+@media screen and (max-width: 480px) {
+	#tess {
+		margin-top:25%;
+	}
+}	
 
 
 

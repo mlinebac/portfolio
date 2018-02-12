@@ -1,0 +1,170 @@
+[debug] [2018-02-12T16:52:03.987Z] ----------------------------------------------------------------------
+[debug] [2018-02-12T16:52:03.990Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\mattlineback\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-02-12T16:52:03.991Z] CLI Version:   3.13.1
+[debug] [2018-02-12T16:52:03.991Z] Platform:      win32
+[debug] [2018-02-12T16:52:03.991Z] Node Version:  v6.10.0
+[debug] [2018-02-12T16:52:03.991Z] Time:          Mon Feb 12 2018 11:52:03 GMT-0500 (Eastern Standard Time)
+[debug] [2018-02-12T16:52:03.991Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-02-12T16:52:04.010Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-02-12T16:52:04.012Z] > authorizing via signed-in user
+[debug] [2018-02-12T16:52:04.015Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-02-12T16:52:04.016Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/PKm3oFfHUDoyu3JY_B-H0i3jgTc7dPxvaXf-KKnYi39zP_-Rm6mejgJ30-wtSQSh',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Mon Feb 12 2018 11:52:04 GMT-0500 (Eastern Standard Time)
+[debug] [2018-02-12T16:52:04.215Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-12T16:52:04.251Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/overdose-339b9  
+ Mon Feb 12 2018 11:52:04 GMT-0500 (Eastern Standard Time)
+[debug] [2018-02-12T16:52:04.716Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-12T16:52:04.718Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/overdose-339b9/tokens  
+ Mon Feb 12 2018 11:52:04 GMT-0500 (Eastern Standard Time)
+[debug] [2018-02-12T16:52:05.149Z] <<< HTTP RESPONSE 200
+[info] 2
+[info] 
+[info] === Deploying to 'overdose-339b9'...
+[info] 
+[info] i  deploying storage, hosting
+[debug] [2018-02-12T16:52:05.658Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/overdose-339b9  
+ Mon Feb 12 2018 11:52:05 GMT-0500 (Eastern Standard Time)
+[debug] [2018-02-12T16:52:06.042Z] <<< HTTP RESPONSE 200
+[info] i  storage: checking storage.rules for compilation errors...
+[debug] [2018-02-12T16:52:06.049Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/overdose-339b9:test { source: { files: [ [Object] ] } } 
+ Mon Feb 12 2018 11:52:06 GMT-0500 (Eastern Standard Time)
+[debug] [2018-02-12T16:52:06.351Z] <<< HTTP RESPONSE 200
+[info] +  storage: rules file storage.rules compiled successfully
+[info] i  storage: uploading rules storage.rules...
+[debug] [2018-02-12T16:52:06.360Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/overdose-339b9/rulesets { source: { files: [ [Object] ] } } 
+ Mon Feb 12 2018 11:52:06 GMT-0500 (Eastern Standard Time)
+[debug] [2018-02-12T16:52:06.635Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-12T16:52:06.636Z] [rules] created ruleset projects/overdose-339b9/rulesets/5512e914-4f82-4975-a43b-958dd06b1968
+[info] i  hosting: preparing public directory for upload...
+[debug] [2018-02-12T16:52:06.860Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/overdose-339b9/uploads/-L59vYgQhr9dFCvo-rGD?fileCount=10&message=  
+ Mon Feb 12 2018 11:52:06 GMT-0500 (Eastern Standard Time)
+[debug] [2018-02-12T16:52:14.469Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-12T16:52:14.470Z] [hosting] .tgz uploaded successfully, waiting for extraction
+[info] +  hosting: 10 files uploaded successfully
+[debug] [2018-02-12T16:52:15.292Z] [rules] releasing firebase.storage/overdose-339b9.appspot.com with ruleset projects/overdose-339b9/rulesets/5512e914-4f82-4975-a43b-958dd06b1968
+[debug] [2018-02-12T16:52:15.293Z] >>> HTTP REQUEST PUT https://firebaserules.googleapis.com/v1/projects/overdose-339b9/releases/firebase.storage/overdose-339b9.appspot.com { name: 'projects/overdose-339b9/releases/firebase.storage/overdose-339b9.appspot.com',
+  rulesetName: 'projects/overdose-339b9/rulesets/5512e914-4f82-4975-a43b-958dd06b1968' } 
+ Mon Feb 12 2018 11:52:15 GMT-0500 (Eastern Standard Time)
+[debug] [2018-02-12T16:52:15.470Z] <<< HTTP RESPONSE 404
+[debug] [2018-02-12T16:52:15.471Z] <<< HTTP RESPONSE BODY <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 404 (Not Found)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>404.</b> <ins>That’s an error.</ins>
+  <p>The requested URL <code>/v1/projects/overdose-339b9/releases/firebase.storage/overdose-339b9.appspot.com</code> was not found on this server.  <ins>That’s all we know.</ins>
+
+[debug] [2018-02-12T16:52:15.473Z] TypeError: Cannot create property 'error' on string '<!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 404 (Not Found)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>404.</b> <ins>That’s an error.</ins>
+  <p>The requested URL <code>/v1/projects/overdose-339b9/releases/firebase.storage/overdose-339b9.appspot.com</code> was not found on this server.  <ins>That’s all we know.</ins>
+'
+    at module.exports (C:\Users\mattlineback\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:11:16)
+    at Request._callback (C:\Users\mattlineback\AppData\Roaming\npm\node_modules\firebase-tools\lib\api.js:43:25)
+    at Request.self.callback (C:\Users\mattlineback\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:186:22)
+    at emitTwo (events.js:106:13)
+    at Request.emit (events.js:191:7)
+    at Request.<anonymous> (C:\Users\mattlineback\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1163:10)
+    at emitOne (events.js:96:13)
+    at Request.emit (events.js:188:7)
+    at IncomingMessage.<anonymous> (C:\Users\mattlineback\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1085:12)
+    at IncomingMessage.g (events.js:291:16)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-02-12T16:52:43.875Z] ----------------------------------------------------------------------
+[debug] [2018-02-12T16:52:43.879Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\mattlineback\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-02-12T16:52:43.879Z] CLI Version:   3.13.1
+[debug] [2018-02-12T16:52:43.879Z] Platform:      win32
+[debug] [2018-02-12T16:52:43.879Z] Node Version:  v6.10.0
+[debug] [2018-02-12T16:52:43.880Z] Time:          Mon Feb 12 2018 11:52:43 GMT-0500 (Eastern Standard Time)
+[debug] [2018-02-12T16:52:43.880Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-02-12T16:52:43.899Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-02-12T16:52:43.900Z] > authorizing via signed-in user
+[debug] [2018-02-12T16:52:43.904Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/overdose-339b9  
+ Mon Feb 12 2018 11:52:43 GMT-0500 (Eastern Standard Time)
+[debug] [2018-02-12T16:52:44.472Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-12T16:52:44.474Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/overdose-339b9/tokens  
+ Mon Feb 12 2018 11:52:44 GMT-0500 (Eastern Standard Time)
+[debug] [2018-02-12T16:52:45.019Z] <<< HTTP RESPONSE 200
+[info] 2
+[info] 
+[info] === Deploying to 'overdose-339b9'...
+[info] 
+[info] i  deploying storage, hosting
+[debug] [2018-02-12T16:52:45.426Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/overdose-339b9  
+ Mon Feb 12 2018 11:52:45 GMT-0500 (Eastern Standard Time)
+[debug] [2018-02-12T16:52:45.832Z] <<< HTTP RESPONSE 200
+[info] i  storage: checking storage.rules for compilation errors...
+[debug] [2018-02-12T16:52:45.838Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/overdose-339b9:test { source: { files: [ [Object] ] } } 
+ Mon Feb 12 2018 11:52:45 GMT-0500 (Eastern Standard Time)
+[debug] [2018-02-12T16:52:46.107Z] <<< HTTP RESPONSE 200
+[info] +  storage: rules file storage.rules compiled successfully
+[info] i  storage: uploading rules storage.rules...
+[debug] [2018-02-12T16:52:46.117Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/overdose-339b9/rulesets { source: { files: [ [Object] ] } } 
+ Mon Feb 12 2018 11:52:46 GMT-0500 (Eastern Standard Time)
+[debug] [2018-02-12T16:52:46.377Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-12T16:52:46.378Z] [rules] created ruleset projects/overdose-339b9/rulesets/10c19890-a0be-47fb-bb2b-55bd019b7e65
+[info] i  hosting: preparing public directory for upload...
+[debug] [2018-02-12T16:52:46.596Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/overdose-339b9/uploads/-L59vhObpgJHUEs_3EnN?fileCount=10&message=  
+ Mon Feb 12 2018 11:52:46 GMT-0500 (Eastern Standard Time)
+[debug] [2018-02-12T16:52:54.623Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-12T16:52:54.624Z] [hosting] .tgz uploaded successfully, waiting for extraction
+[info] +  hosting: 10 files uploaded successfully
+[debug] [2018-02-12T16:52:55.324Z] [rules] releasing firebase.storage/overdose-339b9.appspot.com with ruleset projects/overdose-339b9/rulesets/10c19890-a0be-47fb-bb2b-55bd019b7e65
+[debug] [2018-02-12T16:52:55.325Z] >>> HTTP REQUEST PUT https://firebaserules.googleapis.com/v1/projects/overdose-339b9/releases/firebase.storage/overdose-339b9.appspot.com { name: 'projects/overdose-339b9/releases/firebase.storage/overdose-339b9.appspot.com',
+  rulesetName: 'projects/overdose-339b9/rulesets/10c19890-a0be-47fb-bb2b-55bd019b7e65' } 
+ Mon Feb 12 2018 11:52:55 GMT-0500 (Eastern Standard Time)
+[debug] [2018-02-12T16:52:55.482Z] <<< HTTP RESPONSE 404
+[debug] [2018-02-12T16:52:55.482Z] <<< HTTP RESPONSE BODY <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 404 (Not Found)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>404.</b> <ins>That’s an error.</ins>
+  <p>The requested URL <code>/v1/projects/overdose-339b9/releases/firebase.storage/overdose-339b9.appspot.com</code> was not found on this server.  <ins>That’s all we know.</ins>
+
+[debug] [2018-02-12T16:52:55.486Z] TypeError: Cannot create property 'error' on string '<!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 404 (Not Found)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>404.</b> <ins>That’s an error.</ins>
+  <p>The requested URL <code>/v1/projects/overdose-339b9/releases/firebase.storage/overdose-339b9.appspot.com</code> was not found on this server.  <ins>That’s all we know.</ins>
+'
+    at module.exports (C:\Users\mattlineback\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:11:16)
+    at Request._callback (C:\Users\mattlineback\AppData\Roaming\npm\node_modules\firebase-tools\lib\api.js:43:25)
+    at Request.self.callback (C:\Users\mattlineback\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:186:22)
+    at emitTwo (events.js:106:13)
+    at Request.emit (events.js:191:7)
+    at Request.<anonymous> (C:\Users\mattlineback\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1163:10)
+    at emitOne (events.js:96:13)
+    at Request.emit (events.js:188:7)
+    at IncomingMessage.<anonymous> (C:\Users\mattlineback\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1085:12)
+    at IncomingMessage.g (events.js:291:16)
+[error] 
+[error] Error: An unexpected error has occurred.
