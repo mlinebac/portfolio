@@ -1,14 +1,28 @@
+
 body{
 	width:auto;
 	height:auto;
-	background: url("cuttingBoard.jpg") no-repeat;
+	background: url("wood-2631780_1920.jpg") no-repeat;
+}
+aside {
+	text-align:center;
+	font-size:200%;
+
+}
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position:100% 0; }
 }
 
 #myprojects{
 	width:auto;
-	height:auto;
-	background: url("fog2.jpg") no-repeat;
+	margin:0 auto;
+	background-position: 0px 0px;
+	background-image: url("mountains.jpg"), url(mountains2.jpg);
+	background-repeat: no-repeat, repeat;
+	animation: animatedBackground 40s linear infinite;
 }
+
 
 #hello {
 	margin-top:75px;
@@ -25,31 +39,28 @@ body{
 .container-fluid h2, p{
 	text-align: center;
 	color:white;
+	margin-top:5%;
 
+}
+.container-fluid b{
+	color:#ffbb33;
 }
 
 .jumbotron{
-	margin:10% 5% 5% 5%;
-	padding: 10px 10px 30px 10px;
-	background: rgba(128,150,168,.7);
+	margin:5% 10% 5% 10%;
+	padding: 5px 10px 5px 10px;
+	background: rgba(128,150,168,.6);
 	text-align: center;
-	display:flex;
 	align-content: center;
 	justify-content: center;
 	align-items: center;
+	color:#212121;
 }
-#projects p{
-	margin-top:4%;
-	margin-left:4%;
-}
-
-#tot.jumbotron p{
-	margin-left:4%;
+	
+#tot {
+	margin-top:10%;
 }
 
-#asrw p{
-	margin-top:5%;
-}
 
 
 
